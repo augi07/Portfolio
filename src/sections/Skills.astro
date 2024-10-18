@@ -1,153 +1,187 @@
 <section class="flex flex-col items-center">
-  <h1 class="text-6xl font-RobotoMono mb-20">FÄHIGKEITEN</h1>
-  <svg id="skills-chart" width="450" height="350" viewBox="0 0 36 36">
-    <!-- Círculo de fondo -->
-    <circle
-      cx="18"
-      cy="18"
-      r="15.9155"
-      fill="none"
-      stroke="transparent"
-      stroke-width="3"
-    />
-
-    <!-- Segmento Naranja (40%) -->
-    <g class="segment" data-label="HTML">
-      <circle
-        cx="18"
-        cy="18"
-        r="15.9155"
-        fill="none"
-        stroke="#e44d25"
-        stroke-width="3"
-        stroke-dasharray="18 82"
-        stroke-dashoffset="0"
-        transform="rotate(-90 18 18)"
-        class="transition-all duration-200"
-      />
-    </g>
-
-    <!-- Segmento Azul (20%) -->
-    <g class="segment" data-label="CSS">
-      <circle
-        cx="18"
-        cy="18"
-        r="15.9155"
-        fill="none"
-        stroke="#1572b6"
-        stroke-width="3"
-        stroke-dasharray="18 82"
-        stroke-dashoffset="82"
-        transform="rotate(-90 18 18)"
-        class="transition-all duration-200"
-      />
-    </g>
-    <g class="segment" data-label="JavaScript">
+    <h1 class="text-6xl font-RobotoMono mb-20 text-primary">FÄHIGKEITEN</h1>
+    <div class="relative">
+      <svg id="skills-chart" width="450" height="350" viewBox="0 0 36 36">
+        <!-- Círculo de fondo -->
         <circle
           cx="18"
           cy="18"
           r="15.9155"
           fill="none"
-          stroke="#f7df1e"
+          stroke="transparent"
           stroke-width="3"
-          stroke-dasharray="15 85"
-          stroke-dashoffset="64"
-          transform="rotate(-90 18 18)"
-          class="transition-all duration-200"
         />
-    </g>
-    <g class="segment" data-label="SQL">
-        <circle
-          cx="18"
-          cy="18"
-          r="15.9155"
-          fill="none"
-          stroke="#db7533"
-          stroke-width="3"
-          stroke-dasharray="13 87"
-          stroke-dashoffset="49"
-          transform="rotate(-90 18 18)"
-          class="transition-all duration-200"
-        />
-    </g>
-    <g class="segment" data-label="Tailwind">
-        <circle
-          cx="18"
-          cy="18"
-          r="15.9155"
-          fill="none"
-          stroke="#44a8b3"
-          stroke-width="3"
-          stroke-dasharray="13 87"
-          stroke-dashoffset="36"
-          transform="rotate(-90 18 18)"
-          class="transition-all duration-200"
-        />
-    </g>
-    <g class="segment" data-label="Jest">
-        <circle
-          cx="18"
-          cy="18"
-          r="15.9155"
-          fill="none"
-          stroke="#99415b"
-          stroke-width="3"
-          stroke-dasharray="10 90"
-          stroke-dashoffset="23"
-          transform="rotate(-90 18 18)"
-          class="transition-all duration-200"
-        />
-    </g>
-    <g class="segment" data-label="Java">
-        <circle
-          cx="18"
-          cy="18"
-          r="15.9155"
-          fill="none"
-          stroke="#5382a1"
-          stroke-width="3"
-          stroke-dasharray="5 95"
-          stroke-dashoffset="13"
-          transform="rotate(-90 18 18)"
-          class="transition-all duration-200"
-        />
-    </g>
-    <g class="segment" data-label="MongoDB">
-        <circle
-          cx="18"
-          cy="18"
-          r="15.9155"
-          fill="none"
-          stroke="#00684a"
-          stroke-width="3"
-          stroke-dasharray="10 95"
-          stroke-dashoffset="13"
-          transform="rotate(-90 18 18)"
-          class="transition-all duration-200"
-        />
-    </g>
-  </svg>
-  <p id="skill-label" class="text-xl mt-4 font-bold"></p>
-</section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const segments = document.querySelectorAll('.segment');
-    const label = document.getElementById('skill-label');
-
-    segments.forEach((segment) => {
-      segment.addEventListener('mouseover', () => {
-        const skill = segment.getAttribute('data-label');
-        label.textContent = skill;
-        const circle = segment.querySelector('circle');
-        circle.style.strokeWidth = '5';
-      });
-
-      segment.addEventListener('mouseout', () => {
-        label.textContent = '';
-        const circle = segment.querySelector('circle');
-        circle.style.strokeWidth = '3';
+  
+        <!-- Segmentos de habilidades con data-image -->
+        <!-- Asegúrate de reemplazar '/path/to/html-logo.png' con las rutas correctas a tus imágenes -->
+  
+        <!-- Segmento HTML (18%) -->
+        <g class="segment" data-label="HTML" data-image="/HTML.webp">
+          <circle
+            cx="18"
+            cy="18"
+            r="15.9155"
+            fill="none"
+            stroke="#e44d25"
+            stroke-width="3"
+            stroke-dasharray="18 82"
+            stroke-dashoffset="0"
+            transform="rotate(-90 18 18)"
+            class="transition-all duration-200"
+          />
+        </g>
+  
+        <!-- Segmento CSS (18%) -->
+        <g class="segment" data-label="CSS" data-image="/CSS.webp">
+          <circle
+            cx="18"
+            cy="18"
+            r="15.9155"
+            fill="none"
+            stroke="#1572b6"
+            stroke-width="3"
+            stroke-dasharray="18 82"
+            stroke-dashoffset="82"
+            transform="rotate(-90 18 18)"
+            class="transition-all duration-200"
+          />
+        </g>
+        <!-- Segmento JavaScript (15%) -->
+        <g class="segment" data-label="JavaScript" data-image="/JavaScript.webp">
+            <circle
+            cx="18"
+            cy="18"
+            r="15.9155"
+            fill="none"
+            stroke="#f7df1e"
+            stroke-width="3"
+            stroke-dasharray="15 85"
+            stroke-dashoffset="64"
+            transform="rotate(-90 18 18)"
+            class="transition-all duration-200"
+          />
+        </g>
+  
+        <!-- Segmento SQL (13%) -->
+        <g class="segment" data-label="SQL" data-image="/SQL.webp">
+            <circle
+            cx="18"
+            cy="18"
+            r="15.9155"
+            fill="none"
+            stroke="#db7533"
+            stroke-width="3"
+            stroke-dasharray="13 87"
+            stroke-dashoffset="49"
+            transform="rotate(-90 18 18)"
+            class="transition-all duration-200"
+          />
+        </g>
+  
+        <!-- Segmento Tailwind (13%) -->
+        <g class="segment" data-label="Tailwind" data-image="/Tailwind.webp">
+            <circle
+            cx="18"
+            cy="18"
+            r="15.9155"
+            fill="none"
+            stroke="#44a8b3"
+            stroke-width="3"
+            stroke-dasharray="13 87"
+            stroke-dashoffset="36"
+            transform="rotate(-90 18 18)"
+            class="transition-all duration-200"
+          />
+        </g>
+  
+        <!-- Segmento Jest (10%) -->
+        <g class="segment" data-label="Jest" data-image="/Jest.webp">
+            <circle
+            cx="18"
+            cy="18"
+            r="15.9155"
+            fill="none"
+            stroke="#99415b"
+            stroke-width="3"
+            stroke-dasharray="10 90"
+            stroke-dashoffset="23"
+            transform="rotate(-90 18 18)"
+            class="transition-all duration-200"
+          />
+        </g>
+  
+        <!-- Segmento Java (5%) -->
+        <g class="segment" data-label="Java" data-image="/Java.webp">
+            <circle
+            cx="18"
+            cy="18"
+            r="15.9155"
+            fill="none"
+            stroke="#5382a1"
+            stroke-width="3"
+            stroke-dasharray="5 95"
+            stroke-dashoffset="13"
+            transform="rotate(-90 18 18)"
+            class="transition-all duration-200"
+          />
+        </g>
+  
+        <!-- Segmento MongoDB (10%) -->
+        <g class="segment" data-label="MongoDB" data-image="/MongoDB.webp">
+            <circle
+            cx="18"
+            cy="18"
+            r="15.9155"
+            fill="none"
+            stroke="#00684a"
+            stroke-width="3"
+            stroke-dasharray="10 95"
+            stroke-dashoffset="13"
+            transform="rotate(-90 18 18)"
+            class="transition-all duration-200"
+          />
+        </g>
+      </svg>
+      <div
+        id="skill-overlay"
+        class="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition-opacity duration-200 pointer-events-none"
+      >
+        <img id="skill-image" src="" alt="" class="h-20 w-20 object-contain" />
+        <p id="skill-text" class="text-xl mt-2 font-bold"></p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const segments = document.querySelectorAll('.segment');
+      const overlay = document.getElementById('skill-overlay');
+      const skillImage = document.getElementById('skill-image');
+      const skillText = document.getElementById('skill-text');
+  
+      segments.forEach((segment) => {
+        segment.addEventListener('mouseover', () => {
+          const skill = segment.getAttribute('data-label');
+          const imageSrc = segment.getAttribute('data-image');
+  
+          if (skill && imageSrc) {
+            skillText.textContent = skill;
+            skillImage.src = imageSrc;
+            skillImage.alt = skill;
+            overlay.classList.add('opacity-100');
+          }
+  
+          const circle = segment.querySelector('circle');
+          circle.style.strokeWidth = '5';
+        });
+  
+        segment.addEventListener('mouseout', () => {
+          overlay.classList.remove('opacity-100');
+  
+          const circle = segment.querySelector('circle');
+          circle.style.strokeWidth = '3';
+        });
       });
     });
-  });
-</script>
+  </script>
+  
