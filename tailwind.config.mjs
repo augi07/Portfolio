@@ -12,7 +12,8 @@ export default {
 			}
 		},
 		fontFamily: {
-			'RobotoMono': 'Roboto Mono, monospace'
+			'RobotoMono': 'Roboto Mono, monospace',
+			'CourierNew': 'Courier, monospace'
 		}
 	},
 	plugins: [],
