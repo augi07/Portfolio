@@ -1,10 +1,13 @@
+---
+import Scroll from "../Components/scroll";
+---
 <div class="">
   <header class="py-4 bg-black sm:py-6" x-data="{expanded: false}">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="flex items-center justify-between">
               <div class="shrink-0">
                   <a href="#" title="" class="flex">
-                      <img class="w-auto h-9" src="../../public/favicon-32x32.ico" alt="" />
+                      <img class="w-auto h-9" src="../../favicon-32x32.ico" alt="" />
                   </a>
               </div>
 
@@ -59,5 +62,58 @@
               </div>
           </div>
       </div>
+      
   </section>
+  <button class="btn">
+    <div class="scroll"> </div>
+</button>
 </div>
+<style>
+    /* From Uiverse.io by boryanakrasteva */ 
+.btn {
+  width: 30px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  outline: 2px solid rgb(105, 127, 255);
+  box-shadow: 0px 0px 10px rgb(105, 127, 255);
+  position: relative;  /* Fija el botón a la pantalla */
+    left: 50%;        /* Lo coloca en el centro horizontalmente */
+    bottom: 10px;     /* Lo coloca en la parte inferior */
+    transform: translateX(-50%);  /* Asegura que esté perfectamente centrado */
+    z-index: 1000;    /* Asegura que esté por encima de otros elementos */
+}
+
+.scroll {
+  width: 5px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(105, 127, 255);
+  box-shadow: 0px 0px 10px rgb(105, 127, 255);
+  animation: scroll_4013 2s linear infinite;
+  transform: translateY(40%);
+}
+
+.btn:after {
+  content: 'scroll';
+  position: absolute;
+  top: 140%;
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@keyframes scroll_4013 {
+  0% {
+    transform: translateY(40%);
+  }
+
+  50% {
+    transform: translateY(90%);
+  }
+};
+</style>
