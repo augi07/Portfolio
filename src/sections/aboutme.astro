@@ -26,6 +26,43 @@ import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Puedes usar
         </p>
       </div>
     </div>
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg mt-5 flex items-center justify-center">
+      <ul class="space-y-4">
+          <!-- Deutsch -->
+          <li class="flex items-center justify-between text-lg text-white font-bold w-full">
+              <span class="w-24 font-CourierNew">Deutsch</span>
+              <div class="flex space-x-4">
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+              </div>
+          </li>
+          <!-- Spanisch -->
+          <li class="flex items-center justify-between text-lg text-white font-bold">
+              <span class="w-24 font-CourierNew">Spanisch</span>
+              <div class="flex space-x-4">
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-gray-600 rounded-full dot"></div>
+              </div>
+          </li>
+          <!-- Englisch -->
+          <li class="flex items-center justify-between text-lg text-white font-bold">
+              <span class="w-24 font-CourierNew">Englisch</span>
+              <div class="flex space-x-4">
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-gray-600 rounded-full dot"></div>
+              </div>
+          </li>
+      </ul>
+  </div>
 
     <!-- Redes Sociales -->
     <div class="mt-8 flex space-x-6">
@@ -45,8 +82,18 @@ import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Puedes usar
       <a href="mailto:tuemail@gmail.com" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
         Contáctame
       </a>
-    </div>
+    </div>$
   </section>
+
+  <style>
+    .dot {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .dot:hover {
+        transform: scale(1.5); /* Expands the dot by 1.5 times */
+    }
+</style>
 
 </body>
 </html>
