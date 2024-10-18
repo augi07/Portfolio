@@ -4,13 +4,16 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'primary': '#5ab5b4',
-				'secondary': '#96afd0',
-				'accent': '#7a8bc3',
-				'background': '#f5fbfb',
-				'text': '#040a09',
+				'primary': '#4aa5a4',
+				'secondary': '#2f496a',
+				'accent': '#3c4d86',
+				'background': '#04100f',
+				'text': '#e9f7f7',
 			}
 		},
+		fontFamily: {
+			'RobotoMono': 'Roboto Mono, monospace'
+		}
 	},
 	plugins: [],
 }

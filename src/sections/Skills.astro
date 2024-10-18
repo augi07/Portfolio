@@ -1,3 +1,117 @@
-<section class="flex justify-center items-center">
-    <h1 class="text-6xl">FÄHIGKEITEN</h1>
+<section class="flex flex-col items-center">
+  <h1 class="text-6xl font-RobotoMono mb-20">FÄHIGKEITEN</h1>
+  <svg id="skills-chart" width="450" height="350" viewBox="0 0 36 36">
+    <!-- Círculo de fondo -->
+    <circle
+      cx="18"
+      cy="18"
+      r="15.9155"
+      fill="none"
+      stroke="transparent"
+      stroke-width="3"
+    />
+
+    <!-- Segmento Naranja (40%) -->
+    <g class="segment" data-label="HTML">
+      <circle
+        cx="18"
+        cy="18"
+        r="15.9155"
+        fill="none"
+        stroke="#FFA500"
+        stroke-width="3"
+        stroke-dasharray="40 60"
+        stroke-dashoffset="25"
+        transform="rotate(-90 18 18)"
+        class="transition-all duration-200"
+      />
+    </g>
+
+    <!-- Segmento Azul (20%) -->
+    <g class="segment" data-label="CSS">
+      <circle
+        cx="18"
+        cy="18"
+        r="15.9155"
+        fill="none"
+        stroke="#0000FF"
+        stroke-width="3"
+        stroke-dasharray="20 80"
+        stroke-dashoffset="85"
+        transform="rotate(-90 18 18)"
+        class="transition-all duration-200"
+      />
+    </g>
+
+    <!-- Segmento Amarillo (15%) -->
+    <g class="segment" data-label="Python">
+      <circle
+        cx="18"
+        cy="18"
+        r="15.9155"
+        fill="none"
+        stroke="#FFFF00"
+        stroke-width="3"
+        stroke-dasharray="15 85"
+        stroke-dashoffset="65"
+        transform="rotate(-90 18 18)"
+        class="transition-all duration-200"
+      />
+    </g>
+
+    <!-- Segmento Verde (20%) -->
+    <g class="segment" data-label="MongoDB">
+      <circle
+        cx="18"
+        cy="18"
+        r="15.9155"
+        fill="none"
+        stroke="#008000"
+        stroke-width="3"
+        stroke-dasharray="20 80"
+        stroke-dashoffset="50"
+        transform="rotate(-90 18 18)"
+        class="transition-all duration-200"
+      />
+    </g>
+
+    <!-- Segmento Rojo (5%) -->
+    <g class="segment" data-label="Jest">
+      <circle
+        cx="18"
+        cy="18"
+        r="15.9155"
+        fill="none"
+        stroke="#FF0000"
+        stroke-width="3"
+        stroke-dasharray="5 95"
+        stroke-dashoffset="30"
+        transform="rotate(-90 18 18)"
+        class="transition-all duration-200"
+      />
+    </g>
+  </svg>
+  <p id="skill-label" class="text-xl mt-4 font-bold"></p>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const segments = document.querySelectorAll('.segment');
+    const label = document.getElementById('skill-label');
+
+    segments.forEach((segment) => {
+      segment.addEventListener('mouseover', () => {
+        const skill = segment.getAttribute('data-label');
+        label.textContent = skill;
+        const circle = segment.querySelector('circle');
+        circle.style.strokeWidth = '5';
+      });
+
+      segment.addEventListener('mouseout', () => {
+        label.textContent = '';
+        const circle = segment.querySelector('circle');
+        circle.style.strokeWidth = '3';
+      });
+    });
+  });
+</script>
