@@ -32,33 +32,33 @@ import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Puedes usar
           <li class="flex items-center justify-between text-lg text-white font-bold w-full">
               <span class="w-24 font-CourierNew">Deutsch</span>
               <div class="flex space-x-4">
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
               </div>
           </li>
           <!-- Spanisch -->
           <li class="flex items-center justify-between text-lg text-white font-bold">
               <span class="w-24 font-CourierNew">Spanisch</span>
               <div class="flex space-x-4">
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-gray-600 rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-gray-600 rounded-full"></div>
               </div>
           </li>
           <!-- Englisch -->
           <li class="flex items-center justify-between text-lg text-white font-bold">
               <span class="w-24 font-CourierNew">Englisch</span>
               <div class="flex space-x-4">
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-white rounded-full dot"></div>
-                  <div class="w-5 h-5 bg-gray-600 rounded-full dot"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-white rounded-full"></div>
+                  <div class="w-5 h-5 bg-gray-600 rounded-full"></div>
               </div>
           </li>
       </ul>
@@ -66,19 +66,19 @@ import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Puedes usar
 
     <!-- Redes Sociales -->
     <div class="mt-8 flex space-x-6">
-      <a href="https://twitter.com/tuusuario" class="text-blue-500 hover:text-blue-700">
+      <a href="https://twitter.com/tuusuario" class="text-blue-500 hover:text-blue-700 dot">
         <FaTwitter size={30} />
       </a>
-      <a href="https://linkedin.com/in/tuusuario" class="text-blue-700 hover:text-blue-900">
+      <a href="https://linkedin.com/in/tuusuario" class="text-blue-700 hover:text-blue-900 dot">
         <FaLinkedin size={30} />
       </a>
-      <a href="https://github.com/tuusuario" class="text-gray-800 hover:text-gray-600">
+      <a href="https://github.com/tuusuario" class="text-gray-800 hover:text-gray-600 dot">
         <FaGithub size={30} />
       </a>
     </div>
 
     <!-- Botón de contacto -->
-    <div class="mt-8">
+    <div class="mt-8 dot1">
       <a href="mailto:tuemail@gmail.com" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
         Contáctame
       </a>
@@ -92,6 +92,13 @@ import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Puedes usar
 
     .dot:hover {
         transform: scale(1.5); /* Expands the dot by 1.5 times */
+    }
+    .dot1 {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .dot1:hover:hover {
+        transform: scale(1.1); /* Expands the dot by 1.5 times */
     }
 </style>
 

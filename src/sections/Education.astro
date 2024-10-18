@@ -3,7 +3,7 @@
         <h1 class="text-5xl font-RobotoMono mb-16 text-white">AUSBILDUNG</h1>
         <div class="w-full max-w-3xl mx-auto p-6">
             <!-- Table-like section with white dividing lines -->
-            <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+            <div class="bg-gray-700 p-4 rounded-lg shadow-lg dot">
                 <ul class="divide-y divide-white text-lg text-white">
                     <!-- Row 1 -->
                     <li class="flex justify-between py-3">
@@ -19,4 +19,13 @@
             </div>
         </div>
     </section>
+    <style>
+        .dot {
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .dot:hover {
+            transform: scale(1.03); /* Expands the dot by 1.5 times */
+        }
+    </style>
 </body>
